@@ -1,0 +1,179 @@
+
+
+.center{
+   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.Navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  position: fixed;
+  width: 76vw;
+  min-height: 75px;
+  background-color: white;
+  border-bottom: solid black;
+  margin-top:8rem;
+  background:rgba(255,255,255, 0.6);
+  backdrop-filter: blur(10px);
+
+ 
+}
+
+.Logo {
+  color: white;
+}
+
+.navbar_Logo {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar_Links {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.navbar_Link {
+  color: black;
+  text-decoration: none;
+}
+
+/* BURGER */
+.navbar_burger {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  display: none;
+  cursor: pointer;
+}
+
+/* ================= MOBILE ================= */
+@media screen and (max-width: 767px) {
+
+  .Navbar{
+    width: 100vw;
+    margin-top: 4rem;
+  }
+
+  .navbar_Links {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: -100vw; 
+    width: 100vw;
+    height: 100vh;
+    padding: 2rem;
+    background-color: white;
+    visibility: hidden;
+    transition: all .8s ease-out;
+    background:rgba(255,255,255, 0.9);
+    backdrop-filter: blur(10px);
+
+  }
+
+  /* ✅ QUAND MENU OUVERT */
+  .show_nav .navbar_Links {
+    right: 0;
+    width: 100vw;
+    visibility: visible;
+    transition: left ;
+    transform: translateX(0);
+  
+    
+  }
+
+  .navbar_Link {
+    display: block;
+    padding: 1.5rem;
+    font-size: 5vw;
+  }
+
+  .navbar_item::after{
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 3vw;
+    height: 1px;
+    background:black;
+  }
+.navbar_item:last-child::after{
+    display: none;
+
+    }
+
+  .navbar_burger {
+    display: block;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+
+  }
+
+  .navbar_burger:hover {
+    cursor: pointer;
+    
+  }
+
+  .navbar_bar,
+  .navbar_bar::before,
+  .navbar_bar::after {
+    display: block;
+    width: 40px;
+    height: 3px;
+    border-radius: 3px;
+    background: white;
+    position: relative;
+    transition: all .5s ease-in-out;
+    background-color: black;
+
+  }
+
+  .navbar_bar::before,
+  .navbar_bar::after {
+    content: "";
+    position: absolute;
+    left: 0;
+  
+  }
+
+  .navbar_bar::before {
+    transform: translateY(-12px);
+
+  }
+
+  .navbar_bar::after {
+    transform: translateY(12px);
+  
+  }
+}
+
+.show_nav .navbar_bar::before{
+    transform: rotate(45deg);
+  
+
+}
+
+.show_nav .navbar_bar{
+width: 0;
+
+}
+
+.show_nav .navbar_bar::after{
+    transform: rotate(-45deg);
+
+}
+
