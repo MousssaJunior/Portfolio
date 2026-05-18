@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Karma:wght@300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Karma:wght@300;400;500;600;700&display=swap');
+
 
 * {
  margin: 0;
@@ -9,6 +13,7 @@
 
 h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
+  font-family: 'karma' , serif;
 }
 body{
        margin: 0;
@@ -20,7 +25,14 @@ ul{
 a{
         text-decoration: none;
         color: white;
-        padding: 0.3rem;   }
+        padding: 0.3rem;
+       font-family: 'DM Sans' , sans-serif;
+       
+       }
+
+       p {
+  font-family: 'DM Sans', sans-serif;
+}
 
         
 .main{

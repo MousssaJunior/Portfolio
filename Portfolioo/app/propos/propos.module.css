@@ -1,0 +1,57 @@
+.Qui{
+    height:  46vh;
+    display: flex;
+    justify-content: center;
+    padding: 5vh;
+    gap: 5vw;
+}
+
+.Propos h3{
+font-size: 2.3rem;
+}
+.Propos{
+ display: inline;
+ justify-content:center;
+ max-width: 20vw;
+ margin-top: 2rem;
+
+}
+
+.Carte{
+    max-width: 20vw;
+    border: solid black;
+    border-radius: 1rem;
+    padding: 2rem;
+    padding-top: 0;
+    height: 50vh;
+}
+
+
+@media screen and (max-width: 1024px){
+.Carte{
+    max-width: 30vw;
+  
+}
+.Propos{
+ max-width: 30vw;
+}
+
+}
+
+@media screen and (max-width: 768px){
+
+
+.Propos{
+    max-width:50vh;
+}
+.Qui{
+    display: grid;
+    gap: 5rem;
+    margin: 2rem;
+}
+
+.Carte{
+     max-width: 50vh;
+}
+
+}

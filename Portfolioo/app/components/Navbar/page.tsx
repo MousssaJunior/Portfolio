@@ -22,16 +22,18 @@ export default function Navbar() {
 
       <ul className={styles.navbar_Links}>
         <li className={styles.navbar_item}>
-          <a href="#" className={styles.navbar_Link}>A Propos</a>
+          <a href="#" className={styles.navbar_Link}>Qui je suis </a>
+        </li>
+
+         <li className={styles.navbar_item}>
+          <a href="#" className={styles.navbar_Link}>Projet</a>
         </li>
 
         <li className={styles.navbar_item}>
           <a href="#" className={styles.navbar_Link}>Service</a>
         </li>
 
-        <li className={styles.navbar_item}>
-          <a href="#" className={styles.navbar_Link}>Projet</a>
-        </li>
+       
 
         <li className={styles.navbar_item}>
           <a href="#" className={styles.navbar_Link}>Contact</a>
