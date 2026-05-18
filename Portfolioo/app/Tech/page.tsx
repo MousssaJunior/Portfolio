@@ -1,4 +1,4 @@
-export default function ContactPage() {
+export default function Tech() {
   return (
     <div>
       <h1>Contact</h1>
