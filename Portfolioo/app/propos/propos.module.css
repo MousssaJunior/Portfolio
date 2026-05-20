@@ -1,5 +1,5 @@
 .Qui{
-    height:  46vh;
+    height:  60vh;
     display: flex;
     justify-content: center;
     padding: 5vh;
@@ -8,6 +8,7 @@
 
 .Propos h3{
 font-size: 2.3rem;
+font-weight: 600;
 }
 .Propos{
  display: inline;

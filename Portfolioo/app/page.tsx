@@ -4,7 +4,7 @@ import Header from "./components/Header/page"
 import Projet from "../app/projet/page"
 export default function Home() {
   return (
-    <div >
+    <div className="main">
       <Navbar />
       <Header />
       <Propos />
@@ -16,3 +16,4 @@ export default function Home() {
     </div>
   );
 }
+ 
