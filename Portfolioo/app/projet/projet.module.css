@@ -20,11 +20,10 @@
 }
 
 .embla {
-  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
-
 .embla__viewport {
   overflow: hidden;
   max-width: 80vw;
@@ -33,7 +32,6 @@
 .embla__container {
   display: flex;
   touch-action: pan-y pinch-zoom;
-  gap: 2rem;
   height: 70vh;
   width: 50vw;
 }
@@ -63,6 +61,28 @@
 
 
 
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #999;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dotActive {
+  width: 35px;
+  background: black;
 }
 
 @media screen and (max-width: 768px){
