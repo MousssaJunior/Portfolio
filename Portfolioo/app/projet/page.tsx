@@ -4,6 +4,7 @@ import styles from "./projet.module.css"
 import useEmblaCarousel from 'embla-carousel-react'
 import { useEffect, useState } from "react"
 
+
 export default function Projet() {
 
   const [emblaRef, emblaApi] = useEmblaCarousel()
@@ -37,34 +38,61 @@ export default function Projet() {
 
       <div className={styles.embla}>
 
-        <div className={styles.embla__viewport} ref={emblaRef}>
+     <div className={styles.embla__viewport} ref={emblaRef}>
 
-          <div className={styles.embla__container}>
+<div className={styles.embla__container}>
 
-            <a href="#">
-              <div className={styles.embla__slide}>
-                <img src="Sillage_img.png" alt="sillage" />
-                <h3>Sillage</h3>
-              </div>
-            </a>
 
-            <a href="https://www.figma.com/proto/wBHVDbr8zGUmUZTSsRHumj/Mockup">
-              <div className={styles.embla__slide}>
-                <img src="trisperr_img.png" alt="image de ma maquette" />
-                <h3>Trisper</h3>
-              </div>
-            </a>
+  <div className={`${styles.embla__slide} ${styles.overlayContainer}`}>
+    <a href="#">
 
-            <a href="https://lb-conciergerie.vercel.app/">
-              <div className={styles.embla__slide}>
-                <img src="lbb_img.png" alt="image projet" />
-                <h3>lb conciergerie</h3>
-              </div>
-            </a>
+      <img src="Sillage_img.png" alt="sillage" />
 
-          </div>
+      <div className={styles.overlay}>
+        <p className={styles.text}>
+          Sillage est une plateforme de parfumerie personnalisée...
+        </p>
+      </div>
 
-        </div>
+      <h3>Sillage</h3>
+
+    </a>
+  </div>
+
+
+  <div className={`${styles.embla__slide} ${styles.overlayContainer}`}>
+    <a href="https://www.figma.com/proto/wBHVDbr8zGUmUZTSsRHumj/Mockup">
+
+      <img src="trisperr_img.png" alt="trisper" />
+
+      <div className={styles.overlay}>
+        <p className={styles.text}>Trisper maquette figma</p>
+      </div>
+
+      <h3>Trisper</h3>
+
+    </a>
+  </div>
+
+
+  <div className={`${styles.embla__slide} ${styles.overlayContainer}`}>
+    <a href="https://lb-conciergerie.vercel.app/">
+
+      <img src="lbb_img.png" alt="lb conciergerie" />
+
+      <div className={styles.overlay}>
+        <p className={styles.text}>lb Conciergerie  Site internet</p>
+      </div>
+
+      <h3>lb conciergerie</h3>
+
+    </a>
+  </div>
+
+</div>
+
+
+</div>
 
         {/* Pagination */}
         <div className={styles.pagination}>

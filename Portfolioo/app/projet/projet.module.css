@@ -11,19 +11,23 @@
   padding-top: 30rem;
 }
 
-.projet h2{
+.projet h2 {
   font-size: 1.8rem;
   max-width: 75vh;
   font-weight: 600;
   margin-bottom: 5rem;
-  font-weight: 600;
 }
+
+
+/*      Caroussel        */
+
 
 .embla {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .embla__viewport {
   overflow: hidden;
   max-width: 80vw;
@@ -42,26 +46,28 @@
   width: 50vw;
   height: 60vh;
 
-
+  position: relative;
+  overflow: hidden;
 }
 
 .embla__slide img {
-    height: 95%;
-    width:100%;
-    object-fit:contain;
-  
+  height: 95%;
+  width: 100%;
+  object-fit: contain;
 }
 
-.embla__slide h3{
+
+.embla__slide h3 {
   font-size: 1.5rem;
   font-weight: bold;
   margin-left: 5rem;
   margin-top: 2rem;
   color: black;
-
-
-
 }
+
+
+/*      PAGINATION       */
+
 
 .pagination {
   display: flex;
@@ -85,65 +91,94 @@
   background: black;
 }
 
-@media screen and (max-width: 768px){
+
+/*       OVERLAY         */
 
 
-.embla__slide {
-  flex: 0 0 100%;
-  min-width: 0;
-  width: 80vw;
-
+.overlayContainer {
+  position: relative;
+  overflow: hidden;
 }
-  .embla__container {
+
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 82, 69, 0.6);
+
   display: flex;
-  touch-action: pan-y pinch-zoom;
-  width: 80vw;
-  margin-top: 5rem;
-  
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  pointer-events: none;
 }
+
+
+.overlayContainer:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.text {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  padding: 1rem;
+}
+
+
+/*       Responsive         */
+
+@media screen and (max-width: 768px) {
+  .embla__slide {
+    flex: 0 0 100%;
+    width: 80vw;
+  }
+
+  .embla__container {
+    width: 80vw;
+    margin-top: 5rem;
+  }
 
   .projet {
     display: grid;
     justify-content: center;
   }
 
-  .projet h2{
-  font-size: 1.4rem;
-  max-width: 54vh;
-  font-weight: 600;
-  margin-bottom: 5rem;
-  font-weight: 600;
-  margin-left: 5rem;
-  margin-bottom: 1rem;
+  .projet h2 {
+    font-size: 1.4rem;
+    max-width: 54vh;
+    margin-left: 5rem;
+    margin-bottom: 1rem;
   }
 
-  .embla__slide h3{
+  .embla__slide h3 {
     margin-left: 1.8rem;
   }
 }
 
-@media screen and (max-width: 425px){
-    .projet h2{
-
-  margin-left: 1rem;
-  margin-bottom: 0;
-
-
+@media screen and (max-width: 425px) {
+  .projet h2 {
+    margin-left: 1rem;
+    margin-bottom: 0;
   }
-  .embla__container {
-  display: flex;
-  touch-action: pan-y pinch-zoom;
-  width: 80vw;
-  margin-left: 0;
-  
-}
 
-  .embla__slide{
+  .embla__container {
+    width: 80vw;
+    margin-left: 0;
+  }
+
+  .embla__slide {
     margin: 0;
     height: 40vh;
   }
-  
-  .embla__slide h3{
+
+  .embla__slide h3 {
     margin-top: 0;
   }
 }
