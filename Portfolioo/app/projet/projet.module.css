@@ -59,7 +59,7 @@
 
 .embla__slide h3 {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: bold; 
   margin-left: 5rem;
   margin-top: 2rem;
   color: black;
@@ -88,7 +88,7 @@
 
 .dotActive {
   width: 35px;
-  background: black;
+  background: #005245;
 }
 
 
@@ -104,7 +104,7 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 82, 69, 0.6);
+  background: rgba(0, 82, 69, 0.8);
 
   display: flex;
   align-items: center;

@@ -24,14 +24,15 @@ export default function Navbar() {
         <li className={styles.navbar_item}>
           <a href="#" className={styles.navbar_Link}>Qui je suis </a>
         </li>
+            <li className={styles.navbar_item}>
+          <a href="#" className={styles.navbar_Link}>Compétences</a>
+        </li>
 
          <li className={styles.navbar_item}>
-          <a href="#" className={styles.navbar_Link}>Projet</a>
+          <a href="#" className={styles.navbar_Link}>Projets</a>
         </li>
 
-        <li className={styles.navbar_item}>
-          <a href="#" className={styles.navbar_Link}>Service</a>
-        </li>
+    
 
        
 
