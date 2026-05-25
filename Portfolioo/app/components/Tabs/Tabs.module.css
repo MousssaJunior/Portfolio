@@ -1,8 +1,5 @@
 .Tabs{
-    min-height:40vh ;
     min-width: 50VW;
-  
-
  
 }
 
@@ -33,6 +30,7 @@
 .Title{
     font-size: 2rem;
     margin: 2rem;
+    text-align: center;
    
 }
 .p{
@@ -43,4 +41,28 @@
     font-size: 1.2rem;
 
    
+}
+
+
+.ContainerImg{
+    display: flex;
+    justify-content: center;
+}
+.img{
+    height: 10rem;
+    display: flex;
+    justify-content: space-around;
+    max-width: 20rem;
+   
+}
+
+@media screen and (max-width: 425px) {
+.Tabs{
+    margin-top: 20rem;
+    width: 80vh;
+    text-align: center;
+}
+.p{
+    text-align: center;
+}
 }

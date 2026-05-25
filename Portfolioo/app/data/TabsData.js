@@ -2,17 +2,17 @@ const TabsData = [
   {
     tabTitle: "Front",
     tabHeading: "Permet de styliser le site",
-    txt: ["HTML", "CSS", "React", "Next.js"],
+    images: ["react.png", "Next.png", "htmlCss.png"],
   },
   {
     tabTitle: "Back",
     tabHeading: "Permet de créer des fonctionnalités",
-    txt: ["Node.js", "Express", "Ruby"],
+    images: ["Node.png", "Express.png", "Ruby.png"],
   },
   {
     tabTitle: "Autre",
     tabHeading: "Des outils utiles",
-    txt: ["Figma", "GitHub"],
+    images: ["Figma.png", "GitHub.png"],
   },
 ];
 

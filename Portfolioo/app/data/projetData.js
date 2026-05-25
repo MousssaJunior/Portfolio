@@ -1,7 +1,7 @@
 const TabsData = [
   {
     tabtitle: "Front",
-    tabimg: ["react", "next", "html", "css"],
+    img: ["react.png", "Next.png", "htmlCss.png"],
   },
 
   {

@@ -4,11 +4,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 0;
   width: 100%;
   padding: 6rem 1rem 3rem;
   overflow: hidden;
-  padding-top: 30rem;
 }
 
 .projet h2 {
