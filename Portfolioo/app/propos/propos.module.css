@@ -60,9 +60,76 @@ font-weight: 600;
 
 
 
-@media screen and (max-width: 425px){
-.Carte{
-    min-height: 30vh;
-    margin-bottom: 5rem;
-    }
+@media screen and (max-width: 425px) {
+
+.Tabs {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.Button {
+  flex: none;
+  width: 100%;
+  padding: 16px;
+  font-weight: 600;
+}
+
+.Title {
+  font-size: 1.6rem;
+  margin: 1.5rem;
+  text-align: center;
+}
+
+.p {
+  max-width: 100%;
+  width: 100%;
+  margin: 1.5rem auto;
+  font-size: 1rem;
+  display: block;
+  text-align: center;
+}
+
+.ContainerImg {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.img {
+  height: 5rem;
+  max-width: 10rem;
+}
+
+.Qui {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.Propos {
+  max-width: 100%;
+  margin-top: 1rem;
+}
+
+.Carte {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* sécurité anti-overlap global section tabs/cards */
+.Container,
+.Qui {
+  gap: 1.5rem;
+}
 }
