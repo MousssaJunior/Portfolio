@@ -166,6 +166,10 @@
     margin-bottom: 0;
   }
 
+  .embla__viewport{
+    height: 50vh;
+  }
+
   .embla__container {
     width: 80vw;
     margin-left: 0;
