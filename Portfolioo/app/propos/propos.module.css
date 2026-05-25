@@ -31,12 +31,10 @@ font-weight: 600;
 @media screen and (max-width: 1024px){
 .Carte{
     max-width: 30vw;
-    min-height: 20vh;
   
 }
 .Propos{
  max-width: 30vw;
- min-height: 20vh;
 }
 
 }
@@ -57,4 +55,13 @@ font-weight: 600;
      max-width: 50vh;
 }
 
+}
+
+
+
+
+@media screen and (max-width: 425px){
+.Carte{
+    min-height: 20vh;
+    }
 }
