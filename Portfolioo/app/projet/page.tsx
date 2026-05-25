@@ -2,12 +2,15 @@
 
 import styles from "./projet.module.css"
 import useEmblaCarousel from 'embla-carousel-react'
+import Autoplay from 'embla-carousel-autoplay'
 import { useEffect, useState } from "react"
-
 
 export default function Projet() {
 
-  const [emblaRef, emblaApi] = useEmblaCarousel()
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: false },
+    [Autoplay()]
+  )
 
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([])
@@ -22,7 +25,6 @@ export default function Projet() {
     }
 
     onSelect()
-
     emblaApi.on("select", onSelect)
   }, [emblaApi])
 
@@ -38,63 +40,44 @@ export default function Projet() {
 
       <div className={styles.embla}>
 
-     <div className={styles.embla__viewport} ref={emblaRef}>
+        <div className={styles.embla__viewport} ref={emblaRef}>
+          <div className={styles.embla__container}>
 
-<div className={styles.embla__container}>
+            <div className={`${styles.embla__slide} ${styles.overlayContainer}`}>
+              <a href="#">
+                <img src="Sillage_img.png" alt="sillage" />
+                <div className={styles.overlay}>
+                  <p className={styles.text}>
+                    Sillage est une plateforme de parfumerie personnalisée...
+                  </p>
+                </div>
+                <h3>Sillage</h3>
+              </a>
+            </div>
 
+            <div className={`${styles.embla__slide} ${styles.overlayContainer}`}>
+              <a href="https://www.figma.com/proto/wBHVDbr8zGUmUZTSsRHumj/Mockup">
+                <img src="trisperr_img.png" alt="trisper" />
+                <div className={styles.overlay}>
+                  <p className={styles.text}>Trisper maquette figma</p>
+                </div>
+                <h3>Trisper</h3>
+              </a>
+            </div>
 
-  <div className={`${styles.embla__slide} ${styles.overlayContainer}`}>
-    <a href="#">
+            <div className={`${styles.embla__slide} ${styles.overlayContainer}`}>
+              <a href="https://lb-conciergerie.vercel.app/">
+                <img src="lbb_img.png" alt="lb conciergerie" />
+                <div className={styles.overlay}>
+                  <p className={styles.text}>lb Conciergerie Site internet</p>
+                </div>
+                <h3>lb conciergerie</h3>
+              </a>
+            </div>
 
-      <img src="Sillage_img.png" alt="sillage" />
+          </div>
+        </div>
 
-      <div className={styles.overlay}>
-        <p className={styles.text}>
-          Sillage est une plateforme de parfumerie personnalisée...
-        </p>
-      </div>
-
-      <h3>Sillage</h3>
-
-    </a>
-  </div>
-
-
-  <div className={`${styles.embla__slide} ${styles.overlayContainer}`}>
-    <a href="https://www.figma.com/proto/wBHVDbr8zGUmUZTSsRHumj/Mockup">
-
-      <img src="trisperr_img.png" alt="trisper" />
-
-      <div className={styles.overlay}>
-        <p className={styles.text}>Trisper maquette figma</p>
-      </div>
-
-      <h3>Trisper</h3>
-
-    </a>
-  </div>
-
-
-  <div className={`${styles.embla__slide} ${styles.overlayContainer}`}>
-    <a href="https://lb-conciergerie.vercel.app/">
-
-      <img src="lbb_img.png" alt="lb conciergerie" />
-
-      <div className={styles.overlay}>
-        <p className={styles.text}>lb Conciergerie  Site internet</p>
-      </div>
-
-      <h3>lb conciergerie</h3>
-
-    </a>
-  </div>
-
-</div>
-
-
-</div>
-
-        {/* Pagination */}
         <div className={styles.pagination}>
           {scrollSnaps.map((_, index) => (
             <button
@@ -108,7 +91,6 @@ export default function Projet() {
         </div>
 
       </div>
-
     </section>
   )
 }
