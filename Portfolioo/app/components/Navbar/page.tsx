@@ -17,7 +17,7 @@ export default function Navbar() {
     <nav className={`${styles.Navbar} ${showLinks ? styles.show_nav : ""}`}>
 
       <div className={styles.navbar_Logo}>
-        <img src="#" alt="logo" />
+       <img className={styles.logo} src="/Mj.png" alt="logo" />
       </div>
 
       <ul className={styles.navbar_Links}>
