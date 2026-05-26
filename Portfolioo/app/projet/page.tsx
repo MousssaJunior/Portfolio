@@ -56,7 +56,7 @@ export default function Projet() {
             </div>
 
             <div className={`${styles.embla__slide} ${styles.overlayContainer}`}>
-              <a href="https://www.figma.com/proto/wBHVDbr8zGUmUZTSsRHumj/Mockup?page-id=1410%3A485&node-id=1650-2435&p=f&viewport=70%2C447%2C0.06&t=LqmvhRjJIzdInHf2-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1650%3A2435">
+              <a href="https://www.figma.com/proto/wBHVDbr8zGUmUZTSsRHumj/Mockup?page-id=1410%3A485&node-id=1650-2435&p=f&viewport=70%2C447%2C0.06&t=LqmvhRjJIzdInHf2-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1650%3A2435">, 
                 <img src="trisperr_img.png" alt="trisper" />
                 <div className={styles.overlay}>
                   <p className={styles.text}>Trisper maquette figma</p>

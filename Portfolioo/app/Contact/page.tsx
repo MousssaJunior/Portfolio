@@ -2,14 +2,39 @@
 
 import styles from "./Contact.module.css"
 import contactAnimation from "./ContactAnimation"
-import { useEffect } from "react"
-
+import { useEffect, useRef } from "react"
+import emailjs from "@emailjs/browser"
 
 export default function ContactPage() {
+
+  const form = useRef<HTMLFormElement>(null)
+
   useEffect(() => {
     contactAnimation()
   }, [])
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+
+    if (!form.current) return
+
+  emailjs.sendForm(
+  "service_3wa1wgl",
+  "template_gij4y5l",
+  form.current,
+  "GEKC1P-7W334IJVBb"
+  
+)
+      .then(
+        () => {
+          alert("Message envoyé 🚀")
+        },
+        (error) => {
+          console.log(error.text)
+          alert("Erreur lors de l'envoi")
+        }
+      )
+  }
 
   return (
     <section id="contact" className={styles.contact}>
@@ -19,17 +44,17 @@ export default function ContactPage() {
         <h2 className={styles.contact_title}>Contact</h2>
 
         <p className={styles.contact_lead}>
-        Vous  avez un  projet  ?
+          Vous avez un projet ?
         </p>
 
         <p className={styles.contact_text}>
-Écrivez-moi directement, j’ai hâte de découvrir vos idées passionnantes !
+          Écrivez-moi directement, j’ai hâte de découvrir vos idées passionnantes !
         </p>
 
         <form
+          ref={form}
+          onSubmit={handleSubmit}
           className={styles.contact_form}
-          method="POST"
-          action="#contact"
           id="contactForm"
         >
 
@@ -52,12 +77,6 @@ export default function ContactPage() {
             <label htmlFor="contact-message">Message</label>
             <textarea id="contact-message" name="message" rows={5} required />
           </div>
-
-          <input
-            type="hidden"
-            name="g-recaptcha-response"
-            id="g-recaptcha-response"
-          />
 
           <button className={styles.form_button} type="submit">
             Send Message
