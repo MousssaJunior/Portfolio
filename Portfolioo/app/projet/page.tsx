@@ -44,7 +44,7 @@ export default function Projet() {
           <div className={styles.embla__container}>
 
             <div className={`${styles.embla__slide} ${styles.overlayContainer}`}>
-              <a href="#">
+              <a href="https://github.com/Sillage-git/Sillage-">
                 <img src="Sillage_img.png" alt="sillage" />
                 <div className={styles.overlay}>
                   <p className={styles.text}>
