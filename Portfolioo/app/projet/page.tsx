@@ -43,6 +43,18 @@ export default function Projet() {
         <div className={styles.embla__viewport} ref={emblaRef}>
           <div className={styles.embla__container}>
 
+              <div className={`${styles.embla__slide} ${styles.overlayContainer}`}>
+              <a href="https://github.com/MousssaJunior/RubyEx">
+                <img src="#" alt="CRUD Ruby" />
+                <div className={styles.overlay}>
+                  <p className={styles.text}>
+                    Todo list CRUD Ruby
+                  </p>
+                </div>
+                <h3>Todo</h3>
+              </a>
+            </div>
+
             <div className={`${styles.embla__slide} ${styles.overlayContainer}`}>
               <a href="https://github.com/Sillage-git/Sillage-">
                 <img src="Sillage_img.png" alt="sillage" />
